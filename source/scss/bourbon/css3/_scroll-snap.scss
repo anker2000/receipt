@@ -1,0 +1,11 @@
+@mixin scroll-snap-type($snaptype: mandatory) {
+  // none | <length>
+  @include prefixer(scroll-snap-type, $snaptype, webkit moz ms spec);
+}
+@mixin scroll-snap-align($align: none) {
+  // none | <length>
+  @include prefixer(scroll-snap-align, $align, webkit moz ms spec);
+}
+@mixin scroll-snap-coordinate($coordinates) {
+	@include prefixer(scroll-snap-coordinate, $coordinates, webkit moz ms spec);
+};
