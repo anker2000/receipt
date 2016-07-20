@@ -61,12 +61,21 @@
 						}
 					}
 					.info {
-						padding-top:13px;
+						padding-top:3px;
 						@include flex-grow(3);
 						color:#222;
+						h3 {
+							margin-bottom:2px;
+						}
+						time {
+							color:rgba(black,.5);
+							font-weight:300;
+							font-size:0.9em;
+						}
 					}
+					
 					.price {
-						padding-top:13px;
+						padding-top:3px;
 						@include flex-grow(0);
 						font-size:1.05em;
 						color:rgba(#222,0.75);

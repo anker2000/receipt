@@ -10,6 +10,7 @@ var Chrome = function() {
 	function setupLinks() {
 		$(".receipt_list li li").bind("click",function() {
 			$("body").addClass("secondary");
+			webkit.messageHandlers.callbackHandler.postMessage("geo");
 		});
 		$(".container.secondary header button").bind("click",function() {
 			$("body").removeClass("secondary");

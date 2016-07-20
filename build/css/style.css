@@ -3135,14 +3135,20 @@ button {
             object-fit: cover;
             object-position: center; }
         .receipt_list ul li ul li .info {
-          padding-top: 13px;
+          padding-top: 3px;
           -webkit-flex-grow: 3;
           -moz-flex-grow: 3;
           flex-grow: 3;
           -ms-flex-positive: 3;
           color: #222; }
+          .receipt_list ul li ul li .info h3 {
+            margin-bottom: 2px; }
+          .receipt_list ul li ul li .info time {
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+            font-size: 0.9em; }
         .receipt_list ul li ul li .price {
-          padding-top: 13px;
+          padding-top: 3px;
           -webkit-flex-grow: 0;
           -moz-flex-grow: 0;
           flex-grow: 0;
