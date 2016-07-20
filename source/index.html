@@ -5,10 +5,170 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="apple-touch-icon" href="img/appicon.png?v=1">
+		<style>
+		@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+		</style>
 	</head>
 
-	<body>
-		
+	<body class="secondary">
+		<div class="wrapper">
+			<div class="container main">
+				<header>
+					<h1>Receipts</h1>
+					<nav>
+					</nav>
+					<button class="ion-ios-compose-outline"></button>
+				</header>
+				<section class="receipt_list copy"></section>
+				<section class="receipt_list">
+					<form method="post">
+						<label for="search">Search</label>
+						<input type="search" name="search" placeholder="Search" results="0">
+					</form>
+					<ul>
+						<li>
+							<h2>Store name &mdash; <time>12 July, 2016</time></h2>
+							<ul>
+								<li>
+									<div class="image">
+										<img src="img/jacket.jpg" alt="Jacket">
+									</div>
+									<div class="info">
+										<h3>Bomber jacket</h3>
+									</div>
+									<div class="price">£50.00</div>
+								</li>
+								<li>
+									<div class="image">
+										<img src="img/dress.jpg" alt="Dress">
+									</div>
+									<div class="info"><h3>Aldo dress</h3></div>
+									<div class="price">£50.00</div>
+								</li>
+								<li>
+									<div class="image">
+										<img src="img/sunglasses.jpg" alt="Sunglasses">
+									</div>
+									<div class="info"><h3>Sunglasses</h3></div>
+									<div class="price">£50.00</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2>Store name &mdash; <time>12 July, 2016</time></h2>
+							<ul>
+								<li>
+									<div class="image">
+										<img src="img/dress.jpg" alt="Dress">
+									</div>
+									<div class="info"><h3>Aldo dress</h3></div>
+									<div class="price">£50.00</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2>Store name &mdash; <time>11 July, 2016</time></h2>
+							<ul>
+								<li>
+									<div class="image">
+										<img src="img/jacket.jpg" alt="Jacket">
+									</div>
+									<div class="info">
+										<h3>Bomber jacket</h3>
+									</div>
+									<div class="price">£50.00</div>
+								</li>
+								<li>
+									<div class="image">
+										<img src="img/dress.jpg" alt="Dress">
+									</div>
+									<div class="info"><h3>Aldo dress</h3></div>
+									<div class="price">£50.00</div>
+								</li>
+								<li>
+									<div class="image">
+										<img src="img/sunglasses.jpg" alt="Sunglasses">
+									</div>
+									<div class="info"><h3>Sunglasses</h3></div>
+									<div class="price">£50.00</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2>Store name &mdash; <time>10 July, 2016</time></h2>
+							<ul>
+								<li>
+									<div class="image">
+										<img src="img/jacket.jpg" alt="Jacket">
+									</div>
+									<div class="info">
+										<h3>Bomber jacket</h3>
+									</div>
+									<div class="price">£50.00</div>
+								</li>
+								<li>
+									<div class="image">
+										<img src="img/sunglasses.jpg" alt="Sunglasses">
+									</div>
+									<div class="info"><h3>Sunglasses</h3></div>
+									<div class="price">£50.00</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="container secondary">
+				<header>
+					<button class="ion-ios-arrow-back"></button>
+					<h1>Receipt details</h1>
+				</header>
+				<section class="receipt_details copy"></section>
+				<section class="receipt_details">
+					<div style="background-image:url(img/receipt.jpg)" class="receipt"><span class="ion-ios-camera camera"></span></div>
+					<div>
+						<ul class="meta">
+							<li>
+								<label for="store">Store</label>
+								<input type="text" name="store" class="store" placeholder="Store">
+							</li>
+							<li>
+								<label for="date">Date</label>
+								<input type="date" name="date" placeholder="Date">
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<div class="image">
+									<img src="img/jacket.jpg" alt="Jacket">
+								</div>
+								<div class="info">
+									<h3>Bomber jacket</h3>
+								</div>
+								<div class="price">£50.00</div>
+							</li>
+							<li>
+								<div class="image">
+									<img src="img/dress.jpg" alt="Dress">
+								</div>
+								<div class="info"><h3>Aldo dress</h3></div>
+								<div class="price">£50.00</div>
+							</li>
+							<li>
+								<div class="image">
+									<img src="img/sunglasses.jpg" alt="Sunglasses">
+								</div>
+								<div class="info"><h3>Sunglasses</h3></div>
+								<div class="price">£50.00</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
 		<script src="js/jquery-3.0.0.min.js"></script>
 		<script src="js/site.js"></script>
 	</body>

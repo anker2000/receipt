@@ -1,0 +1,28 @@
+.receipt_list {
+	form {
+		padding:9px 15px 8px;
+		background-color:$grey_darker;
+		label {
+			display:none;
+		}
+		input[type=search] {
+			width:100%;
+			// @include appearance(none);
+			border:none;
+			border-radius:16px;
+			height:32px;
+			font-size:1em;
+			text-align:center;
+		}
+		input {
+			outline:none;
+		}
+	}
+}
+input {
+	@include appearance(none);
+	font-size:1em;
+	border:none;
+	border-radius:0;
+	
+}

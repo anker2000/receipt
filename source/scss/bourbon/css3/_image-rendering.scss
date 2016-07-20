@@ -12,3 +12,11 @@
     image-rendering: $mode;
   }
 }
+@mixin object-fit($property: none) {
+  // none | <transform-function>
+  @include prefixer(object-fit, $property, webkit moz ms o spec);
+}
+@mixin object-position($property: none) {
+  // none | <transform-function>
+  @include prefixer(object-position, $property, webkit moz ms o spec);
+}

@@ -1,0 +1,124 @@
+.receipt_details {
+	overflow:scroll;
+	-webkit-overflow-scrolling: touch;
+	top:$receiptbar_height;
+	height:calc(100vh - #{$receiptbar_height});
+	box-sizing:border-box;
+	width:100vw;
+	position:absolute;
+	&.copy {
+		pointer-events:none;
+		overflow:visible;
+		z-index:-1;
+		filter:blur(5px);
+		-webkit-filter:blur(5px);
+	}
+	div.receipt {
+		background-color:$pink;
+		background-size:cover;
+		background-position:center top;
+		width:100%;
+		height:$receipt_height;
+		line-height:$receipt_height;
+		text-align:center;
+		.camera {
+			color:$blue;
+			font-size:60px;
+		}
+	}
+	label {
+		min-width:60px;
+		position:absolute;
+		z-index:100;
+		margin-top:9px;
+		color:transparent;
+	}
+	.meta {
+		li {
+			label {
+				padding-left:30px;
+				&:before {
+					font-size:24px;
+					position:absolute;
+					margin-top:-4px;
+					width:18px;
+					text-align:center;
+					left:0;
+					color:$blue;
+				}
+			}
+		}
+		li:first-child {
+			label {
+				@extend .ion-ios-location-outline;
+				&:before {
+					margin-top:-3px;
+				}
+			}
+		}
+		li:last-child {
+			label {
+				@extend .ion-ios-calendar-outline;
+			}
+		}
+			
+	}
+	input {
+		@include flex-grow(1);
+		background-color:transparent;
+		box-sizing:border-box;
+		height:36px;
+		margin:0;
+		outline:none;
+		padding-left:33px;
+	}
+	ul {
+		background-color:white;
+		border-top:5px solid $stroke_color;
+		&:first-child {
+			border-top:0;
+		}
+		li {
+			background-color:white;
+			border-top:1px solid $stroke_color;
+			@include display-box();
+			@include justify-content(space-between);
+			padding:14px $sidemargin 14px 0;
+			margin-left:$sidemargin;
+			position: relative;
+			
+			&:first-child {
+				border-top:none;
+			}
+			.image {
+				@include flex-grow(0);
+				display:block;
+				width:$list_image_size;
+				height:$list_image_size;
+				background-color:$pink;
+				border-radius:50%;
+				margin-right:calc(#{$sidemargin} - 5px);
+				overflow:hidden;
+				img {
+					width:$list_image_size;
+					height:$list_image_size;
+					object-fit:cover;
+					object-position:center;
+				}
+			}
+			.info {
+				padding-top:13px;
+				@include flex-grow(3);
+				color:#222;
+			}
+			.price {
+				padding-top:13px;
+				@include flex-grow(0);
+				font-size:1.05em;
+				color:rgba(#222,0.75);
+				font-weight:200;
+			}
+		}
+	}
+
+}
