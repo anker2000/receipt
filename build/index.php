@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 	<head>
 		<title>Receipt</title>
@@ -9,16 +9,11 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<link rel="apple-touch-icon" href="img/appicon.png?v=1">
 		<style>
-		@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+		@import 'https://fonts.googleapis.com/css?family=Space+Mono';
 		</style>
-		<script>
-		function testFunction(msg) {
-	alert('heeyeyy',msg);
-}
-</script>
 	</head>
 
-	<body class="">
+	<body class="secondary">
 		<div class="wrapper">
 			<div class="container main">
 				<header>
@@ -154,45 +149,98 @@
 				</header>
 				<section class="receipt_details copy"></section>
 				<section class="receipt_details">
-					<div style="background-image:url(img/receipt.jpg)" class="receipt"><span class="ion-ios-camera camera"></span></div>
+					<div class="receipt">
+						<label>Your receipt</label>
+						<span class="ion-ios-camera camera"></span>
+						<input type="file" accept="image/*" >
+					</div>
 					<div>
 						<ul class="meta">
 							<li>
 								<label for="store">Store</label>
 								<input type="text" name="store" class="store" placeholder="Store">
 							</li>
+							<ul class="nearby_stores">
+							</ul>
 							<li>
 								<label for="date">Date</label>
 								<input type="date" name="date" placeholder="Date">
 							</li>
 						</ul>
-						<ul>
+						<div class="add_item">
+							<button>Add item</button>
+						</div>
+						<ul class="items">
+							
 							<li>
-								<div class="image">
-									<img src="img/jacket.jpg" alt="Jacket">
+								<div class="item">
+									<div class="image" style="background-image:url(img/jacket.jpg);">
+									</div>
+									<div class="info">
+										<h3>Bomber jacket</h3>
+									</div>
+									<div class="price">£50.00</div>
 								</div>
-								<div class="info">
-									<h3>Bomber jacket</h3>
+								<div class="tools">
+									<span class="edit">Edit</span>
+									<span class="Delete">Delete</span>
 								</div>
-								<div class="price">£50.00</div>
 							</li>
 							<li>
-								<div class="image">
-									<img src="img/dress.jpg" alt="Dress">
+								<div class="item">
+									<div class="image" style="background-image:url(img/dress.jpg);">
+									</div>
+									<div class="info"><h3>Aldo dress</h3></div>
+									<div class="price">£50.00</div>
 								</div>
-								<div class="info"><h3>Aldo dress</h3></div>
-								<div class="price">£50.00</div>
+								<div class="tools">
+									<span class="edit">Edit</span>
+									<span class="Delete">Delete</span>
+								</div>
 							</li>
 							<li>
-								<div class="image">
-									<img src="img/sunglasses.jpg" alt="Sunglasses">
+								<div class="item">
+									<div class="image" style="background-image:url(img/sunglasses.jpg);">
+									</div>
+									<div class="info"><h3>Sunglasses</h3></div>
+									<div class="price">£50.00</div>
 								</div>
-								<div class="info"><h3>Sunglasses</h3></div>
-								<div class="price">£50.00</div>
+								<div class="tools">
+									<span class="edit">Edit</span>
+									<span class="Delete">Delete</span>
+								</div>
 							</li>
 						</ul>
 					</div>
 				</section>
+			</div>
+			<div class="container overlay">
+				<header>
+					<button class="cancel">Cancel</button>
+					<h1>Add an item</h1>
+					<button class="save">Save</button>
+				</header>
+				<div class="item">
+					<ul>
+						<li>
+							<label for="name">Item name</label>
+							<input type="text" name="name" class="name" placeholder="Item name">
+						</li>
+						<li>
+							<label for="price">Price</label>
+							<input type="number" name="price" placeholder="Price">
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div class="photo">
+								<label>Your item</label>
+								<span class="ion-ios-camera camera"></span>
+								<input type="file" accept="image/*">
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<script src="js/jquery-3.0.0.min.js"></script>

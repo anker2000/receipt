@@ -56,5 +56,48 @@
 			font-weight:1000;
 			color:#222;
 		}
+		button {
+			display:inline;
+			@include appearance(none);
+			padding:0;
+			margin:0;
+			border:none;
+			color:#222;
+			font-size:28px;
+			line-height:auto;
+			background-color:transparent;
+			height:auto;
+		}
+	}
+	&.overlay {
+		header {
+			button {
+				width:auto;
+				color:$blue;
+				bottom:4px;
+				position:absolute;
+				margin:0;
+				font-size:1em;
+				padding:10px $sidemargin;
+				&:first-of-type {
+					left:0;
+				}
+				&:last-of-type {
+					right:0;
+				}
+			}
+			position:relative;
+			top:0;
+			left:0;
+			width:100%;
+			bottom:auto;
+			height:$navigationbar_height;
+			h1 {
+				text-align:center;
+			}
+			.close {
+				font-size:1em;
+			}
+		}
 	}
 }

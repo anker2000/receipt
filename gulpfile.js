@@ -11,7 +11,7 @@ var gulp		= require('gulp'),
  	gulp = require('gulp');
  
 gulp.task('fileinclude', function() {
-  gulp.src(['index.html'])
+  gulp.src(['index.html'],['index.php'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -59,11 +59,7 @@ gulp.task('html', function() {
 
 	'use strict';
 
-	gulp.src(['source/*.html'],['source/*.htm'])
-		.pipe(fileinclude({
-	      prefix: '@@',
-	      basepath: '@file'
-	    }))
+	gulp.src(['source/*.php'])
 		.pipe(gulp.dest('./build/'))
 		.pipe(livereload())
 		.on('error', function (err) {
@@ -87,6 +83,7 @@ gulp.task('watch', function() {
 	'use strict';
 
 	livereload.listen();
+	gulp.watch('source/*.php',['html']);
 	gulp.watch('source/js/*.js', ['scripts']);
 	gulp.watch('source/js/**/*.js', ['scripts']);
 	gulp.watch('source/scss/**/**/**/**/*.scss', ['styles']);
